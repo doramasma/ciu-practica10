@@ -31,7 +31,6 @@ Esta práctica tiene como objetivo realizar una pequeña introducción a arduino
 
 En principio para esta práctica ibamos a contar con una placa arduino uno, además de ciertos componentes como serían la resistencia y el led. Sin embargo, como se comentó anteriormente debido a las circunstancias actuales hemos tenido que optar por utilizar un simulador. Tinkercad es un simulador online, que nos permitirá seleccionar entre distintos tipos de arduinos (modelos predefinidos) o también partir de un modelo base e ir añadiendo distintos componentes. En este caso, solo necesitamos el modelo básico que viene con un led. Que cuenta con los siguientes componentes:
 
-## Sistema arduino
 <div align="center">
   <img src="/componentes_arduino.png" alt="componentes arduino ">
   <p align="center">
@@ -44,6 +43,7 @@ En principio para esta práctica ibamos a contar con una placa arduino uno, adem
 La estrategia que se ha seguido para generar el efecto solicitado, consiste en calcular el seno de un valor que se irá incrementando cada vez que suceda un parpadeo. A el resultado de esta operación se le calcula un mapeo siguiendo la siguiente fórmula:
 
 double slope = 1.0 * (freqMin - freqMax) / (sinMax - sinMin);
+
 double output = freqMax + slope * (input - sinMin);
 
 Donde freqMin y freqMax son las frecuencias mínimas/máximas a las que queremos realizar el mapeo. sinMin y sinMax, son -1 y 1, o lo que es lo mismo los valores mínimos y máximos que nos retornará la operación del seno. Y input es el resultado de la operación seno.
