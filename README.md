@@ -47,7 +47,7 @@ double slope = 1.0 * (freqMin - freqMax) / (sinMax - sinMin);
 double output = freqMax + slope * (input - sinMin);
 
 Donde freqMin y freqMax son las frecuencias mínimas/máximas a las que queremos realizar el mapeo. sinMin y sinMax, son -1 y 1, o lo que es lo mismo los valores mínimos y máximos que nos retornará la operación del seno. Y input es el resultado de la operación seno.
-Una vez calculado el mapeo (que nos da una frecuencia entre freqMin y freqMax) calculamos el tiempo que pasará entre el encendido y apagado del LED, basándonos en la ecuación T=1F, donde T es el tiempo en segundos y F es la frecuencia.
+Una vez calculado el mapeo (que nos da una frecuencia entre freqMin y freqMax) calculamos el tiempo que pasará entre el encendido y apagado del LED, basándonos en la ecuación T=1/F, donde T es el tiempo en segundos y F es la frecuencia.
 
 
 
